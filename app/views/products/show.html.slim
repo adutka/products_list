@@ -1,0 +1,42 @@
+- model_class = Product
+div class="page-header"
+  h1=t '.title', :default => model_class.model_name.human.titleize
+
+p
+  strong= model_class.human_attribute_name(:sku) + ':'
+  br
+  = @product.sku
+p
+  strong= model_class.human_attribute_name(:name) + ':'
+  br
+  = @product.name
+p
+  strong= model_class.human_attribute_name(:field1) + ':'
+  br
+  = @product.field1
+p
+  strong= model_class.human_attribute_name(:field2) + ':'
+  br
+  = @product.field2
+p
+  strong= model_class.human_attribute_name(:field3) + ':'
+  br
+  = @product.field3
+p
+  strong= model_class.human_attribute_name(:field4) + ':'
+  br
+  = @product.field4
+p
+  strong= model_class.human_attribute_name(:dimension) + ':'
+  br
+  = @product.dimension
+p
+  strong= model_class.human_attribute_name(:price) + ':'
+  br
+  = @product.price
+
+= link_to t('.back', :default => t("helpers.links.back")), products_path, :class => 'btn btn-default'
+'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_product_path(@product), :class => 'btn btn-default'
+'
+= link_to t('.destroy', :default => t("helpers.links.destroy")), product_path(@product), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

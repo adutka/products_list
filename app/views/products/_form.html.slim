@@ -1,0 +1,44 @@
+= form_for @product, html: { class: "form form-horizontal product" } do |f|
+  .form-group
+    = f.label :sku, :class => 'control-label'
+    .controls
+      = f.text_field :sku, :class => 'form-control'
+    = error_span(@product[:sku])
+  .form-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'form-control'
+    = error_span(@product[:name])
+  .form-group
+    = f.label :field1, :class => 'control-label'
+    .controls
+      = f.text_field :field1, :class => 'form-control'
+    = error_span(@product[:field1])
+  .form-group
+    = f.label :field2, :class => 'control-label'
+    .controls
+      = f.text_field :field2, :class => 'form-control'
+    = error_span(@product[:field2])
+  .form-group
+    = f.label :field3, :class => 'control-label'
+    .controls
+      = f.text_field :field3, :class => 'form-control'
+    = error_span(@product[:field3])
+  .form-group
+    = f.label :field4, :class => 'control-label'
+    .controls
+      = f.text_field :field4, :class => 'form-control'
+    = error_span(@product[:field4])
+  .form-group
+    = f.label :dimension, :class => 'control-label'
+    .controls
+      = f.text_field :dimension, :class => 'form-control'
+    = error_span(@product[:dimension])
+  .form-group
+    = f.label :price, :class => 'control-label'
+    .controls
+      = f.text_field :price, :class => 'form-control'
+    = error_span(@product[:price])
+  = f.submit nil, :class => 'btn btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), products_path, :class => 'btn'
