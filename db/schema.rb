@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150630185626) do
+ActiveRecord::Schema.define(version: 20150701051952) do
 
   create_table "products", force: :cascade do |t|
     t.integer  "sku",        limit: 4
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20150630185626) do
     t.decimal  "price",                  precision: 15, scale: 5
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
+  end
+
+  create_table "resources", force: :cascade do |t|
+    t.string   "filename",     limit: 255
+    t.boolean  "is_processed", limit: 1,   default: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
   end
 
 end

@@ -32,6 +32,10 @@ gem "twitter-bootstrap-rails" # UI
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+#gem "fastercsv" # csv parser
+gem 'smarter_csv'
+
+gem 'carrierwave' # to upload files,pictures etc
 
 group :development, :test do
   gem 'thin' #more fast than webrick
