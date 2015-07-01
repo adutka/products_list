@@ -36,6 +36,7 @@ gem "twitter-bootstrap-rails" # UI
 gem 'smarter_csv'
 
 gem 'carrierwave' # to upload files,pictures etc
+gem 'will_paginate', '~> 3.0.6' # for pagging
 
 group :development, :test do
   gem 'thin' #more fast than webrick
