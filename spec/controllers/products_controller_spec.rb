@@ -29,9 +29,8 @@ RSpec.describe ProductsController, type: :controller do
   }
 
   let(:invalid_attributes) {
-    #skip("Add a hash of attributes invalid for your model")
-    {sku: "Add a hash of attributes invalid for your model"}
-
+    # skip("Add a hash of attributes invalid for your model")
+{sku: nil}
   }
 
   # This should return the minimal set of values that should be in the session
@@ -106,14 +105,14 @@ RSpec.describe ProductsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {sku: 1}
       }
 
       it "updates the requested product" do
         product = Product.create! valid_attributes
         put :update, {:id => product.to_param, :product => new_attributes}, valid_session
         product.reload
-        skip("Add assertions for updated state")
+        expect(product.sku).to eq(1)
       end
 
       it "assigns the requested product as @product" do
